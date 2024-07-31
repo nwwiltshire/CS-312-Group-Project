@@ -6,11 +6,11 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 5001;
 
-// Middleware
+// Cors
 app.use(cors());
 app.use(bodyParser.json());
 
-// MongoDB connection
+// MongoDB
 mongoose.connect('mongodb://127.0.0.1:27017/expenseTracker', { useNewUrlParser: true, useUnifiedTopology: true });
 
 const connection = mongoose.connection;
